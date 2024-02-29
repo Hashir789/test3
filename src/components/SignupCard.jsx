@@ -5,7 +5,7 @@ import gennotateContext from '../gennotateContext/gennotateContext';
 
 const SignupCard = () => {
     const context = useContext(gennotateContext);
-    const { setAuthentication } = context;
+    const { setAuthentication, seeSignUpPassword, setSeeSignUpPassword, seeSignUpConfirmPassword, setSeeSignUpConfirmPassword } = context;
     const handleSignup = (e) =>{
         e.preventDefault();
         const firstName = e.target.elements.firstName.value;
@@ -30,9 +30,9 @@ const SignupCard = () => {
                         <TextField name="username" variant="standard" label="Username" fullWidth required color='success' InputProps={{startAdornment: (<InputAdornment position="start"><FaUser size={18}/></InputAdornment>)}}/>
                     </Box>
                     <Box my={3} sx={{ display: 'flex' }}>
-                        <TextField name="password" type="password" variant="standard" label="Password" fullWidth required color='success' inputMode='none' InputProps={{startAdornment: (<InputAdornment position="start"><FaLock size={18}/></InputAdornment>), endAdornment: (<InputAdornment position="end"><Checkbox icon={<FaEye size={18}/>} checkedIcon={<FaEyeSlash size={18}/>} color='default'/></InputAdornment>)}}/>
+                        <TextField name="password" type={seeSignUpPassword?'password':'text'} variant="standard" label="Password" fullWidth required color='success' inputMode='none' InputProps={{startAdornment: (<InputAdornment position="start"><FaLock size={18}/></InputAdornment>), endAdornment: (<InputAdornment position="end"><Checkbox  onChange={(e)=>{ setSeeSignUpPassword(!e.target.checked); }} icon={<FaEye size={18}/>} checkedIcon={<FaEyeSlash size={18}/>} color='default'/></InputAdornment>)}}/>
                         <Box mx={1}></Box>
-                        <TextField name="cpassword" type="password" variant="standard" label="Confirm Password" fullWidth required color='success' inputMode='none' InputProps={{startAdornment: (<InputAdornment position="start"><FaLock size={18}/></InputAdornment>), endAdornment: (<InputAdornment position="end"><Checkbox icon={<FaEye size={18}/>} checkedIcon={<FaEyeSlash size={18}/>} color='default'/></InputAdornment>)}}/>
+                        <TextField name="cpassword" type={seeSignUpConfirmPassword?'password':'text'} variant="standard" label="Confirm Password" fullWidth required color='success' inputMode='none' InputProps={{startAdornment: (<InputAdornment position="start"><FaLock size={18}/></InputAdornment>), endAdornment: (<InputAdornment position="end"><Checkbox onChange={(e)=>{ setSeeSignUpConfirmPassword(!e.target.checked); }} icon={<FaEye size={18}/>} checkedIcon={<FaEyeSlash size={18}/>} color='default'/></InputAdornment>)}}/>
                     </Box>
                     <Box mt={8}>
                         <Button type="submit" variant="contained" fullWidth sx={{ fontWeight: 'bold', backgroundImage: 'linear-gradient(to bottom, #0ea190, #11b97c)' }}>Sign Up</Button>

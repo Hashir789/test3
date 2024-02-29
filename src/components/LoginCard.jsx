@@ -5,7 +5,7 @@ import gennotateContext from '../gennotateContext/gennotateContext';
 
 const LoginCard = () => {
     const context = useContext(gennotateContext);
-    const { setAuthentication } = context;
+    const { setAuthentication, seeLoginPassword, setSeeLoginPassword } = context;
     const handleLogin = (e) =>{
         e.preventDefault();
         const username = e.target.elements.username.value;
@@ -22,7 +22,7 @@ const LoginCard = () => {
                         <TextField name="username" variant="standard" label="Username" fullWidth required color='success' InputProps={{startAdornment: (<InputAdornment position="start"><FaUser size={18}/></InputAdornment>)}}/>
                     </Box>
                     <Box my={3}>
-                        <TextField name="password" type="password" variant="standard" label="Password" fullWidth required color='success' inputMode='none' InputProps={{startAdornment: (<InputAdornment position="start"><FaLock size={18}/></InputAdornment>), endAdornment: (<InputAdornment position="end"><Checkbox icon={<FaEye size={18}/>} checkedIcon={<FaEyeSlash size={18}/>} color='default'/></InputAdornment>)}}/>
+                        <TextField name="password" type={seeLoginPassword?'password':'text'} variant="standard" label="Password" fullWidth required color='success' inputMode='none' InputProps={{startAdornment: (<InputAdornment position="start"><FaLock size={18}/></InputAdornment>), endAdornment: (<InputAdornment position="end"><Checkbox onChange={(e)=>{ setSeeLoginPassword(!e.target.checked); }} icon={<FaEye size={18}/>} checkedIcon={<FaEyeSlash size={18}/>} color='default'/></InputAdornment>)}}/>
                     </Box>
                     <Box mt={8}>
                         <Button type="submit" variant="contained" fullWidth sx={{ fontWeight: 'bold', backgroundImage: 'linear-gradient(to bottom, #0ea190, #11b97c)' }}>Login</Button>

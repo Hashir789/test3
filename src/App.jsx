@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Authentication from './pages/Authentication';
 import './app.css';
 import GennotateState from './gennotateContext/GennotateState';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Authentication />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </Router>
       </Box>

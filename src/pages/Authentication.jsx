@@ -12,7 +12,7 @@ const Authentication = () => {
         <Grid container>
             <Grid item xs={12} sm={7} sx={{ height: '100vh', display: { xs: 'none', sm: 'flex' } }}>
               <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', width: '50vw' }}>
-                <Typography sx={{ fontFamily: "'Lateef', serif", fontSize: '8vw', fontWeight: '700', color: 'white', display: 'flex', lineHeight: 1 }} ml={5}>Gennotate</Typography>
+                <Typography sx={{ fontFamily: "'Lateef', serif", fontSize: '8vw', fontWeight: '700', color: 'white', lineHeight: 1 }} textAlign='center'>Gennotate</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Typography sx={{ fontFamily: "'Lateef', serif", fontSize: '2vw', color: 'white', marginLeft: 'auto', marginRight: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }} textAlign='center'>{authentication} to continue access page&nbsp;<FaAngleRight size='1.5vw'/></Typography>
                 </Box>

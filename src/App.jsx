@@ -12,8 +12,8 @@ function App() {
       <Box sx={{ padding: 0, margin: 0 }}>
         <Router>
           <Routes>
-            <Route path="/" element={<Authentication />} />
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery" element={<Authentication />} />
+            <Route path="/" element={<Gallery />} />
           </Routes>
         </Router>
       </Box>

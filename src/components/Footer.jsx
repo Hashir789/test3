@@ -1,50 +1,68 @@
-import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Box, Grid, Tooltip, Typography, IconButton } from '@mui/material'
 
 const Footer = () => {
   return (
     <Box sx={{ background: 'linear-gradient(to bottom, #0ea190, #11b97c)' }} pb={2} px={3}>
         <Box sx={{ borderBottom: '1px solid rgba(0,0,0,0.2)' }} pb={4} pt={4}>
-            <Grid container px={0}>
-                <Grid item xs={4} sm={3} sx={{ borderRight: '1px solid rgba(0,0,0,0.2)' }} px={3}>
+            <Grid container>
+                <Grid item xs={12} sm={5} sx={{ borderRight: { sm: '1px solid rgba(0,0,0,0.1)', xs: 'none' } }} px={3}>
                     <Box>
-                        <Typography sx={{ fontFamily: "'Lateef', serif", fontSize: '2.75vw', color: 'white', fontWeight: 'bold' }}>Gennotate</Typography>
-                        <Typography sx={{ fontSize: '1.2vw', color: 'white', lineHeight: 1.2 }} textAlign='justify'>Gennotate, meticulously developed by NUST students, serves as a comprehensive web application dedicated to the precise generation and segmentation of Optical Coherence Tomography (OCT) images, reflecting a seamless blend of simplicity and functionality.</Typography>
-                    </Box>
-                </Grid>
-                <Grid item xs={4} sm={3} sx={{ borderRight: '1px solid rgba(0,0,0,0.2)' }} px={3}>
-                    <Box py={1}>
-                        <Typography sx={{ fontSize: '1.25vw', color: 'white', fontWeight: 'bold' }}>Services</Typography>
-                        <Box py={2}>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Image Generation</Typography>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Image Segmentation</Typography>
+                        <Typography sx={{ fontFamily: "'Lateef', serif", fontSize: { sm: '2.75vw', xs: '8vw' }, color: 'white', fontWeight: 'bold' }}>Gennotate</Typography>
+                        <Typography sx={{ fontSize: { sm: '1.2vw', xs: '3vw' }, color: 'white', lineHeight: 1.2 }} textAlign='justify'>Gennotate, meticulously developed by NUST students, serves as a comprehensive web application dedicated to the precise generation and segmentation of Optical Coherence Tomography (OCT) images, reflecting a seamless blend of simplicity and functionality.</Typography>
+                        <Box sx={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }} mt={{ xs: 0, sm: 1 }} mb={{ xs: 2, sm: 0 }}>
+                            <Tooltip title="Github" arrow>
+                                <IconButton><FaGithub style={{ color: 'white', fontSize: { xs: '1.2vw', sm: '3vw' } }} /></IconButton>
+                            </Tooltip>
+                            <Tooltip title="LinkedIn" arrow>
+                                <IconButton><FaLinkedin style={{ color: 'white', fontSize: { xs: '1.2vw', sm: '3vw' } }}/></IconButton>
+                            </Tooltip>
+                            <Tooltip title="Twitter" arrow>
+                                <IconButton><FaTwitter style={{ color: 'white', fontSize: { xs: '1.2vw', sm: '3vw' } }}/></IconButton>
+                            </Tooltip>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={4} sm={3} sx={{ borderRight: '1px solid rgba(0,0,0,0.2)' }} px={3}>
-                    <Box py={1}>
-                        <Typography sx={{ fontSize: '1.25vw', color: 'white', fontWeight: 'bold' }}>Services</Typography>
-                        <Box py={2}>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Image Generation</Typography>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Image Segmentation</Typography>
+                <Grid item xs={12} sm={2} sx={{ borderRight: { sm: '1px solid rgba(0,0,0,0.1)', xs: 'none' } }} px={3}>
+                    <Box py={{ xs: 1, sm: 2 }}>
+                        <Typography sx={{ fontSize: { xs: '4vw', sm: '1.2vw' }, color: '#154d4f', fontWeight: 'bold' }}>Services</Typography>
+                        <Box py={{ xs: 1, sm: 2 }}>
+                            <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>Generation</Typography>
+                            <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>Segmentation</Typography>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={4} sm={3}>
-                    <Box py={1}>
-                        <Typography sx={{ fontSize: '1.25vw', color: 'white', fontWeight: 'bold' }}>Pages</Typography>
-                        <Box py={2}>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Home</Typography>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Gallery</Typography>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Generate</Typography>
-                            <Typography sx={{ fontSize: '1.2vw', color: 'white' }}>Our Team</Typography>
+                <Grid item xs={12} sm={2} sx={{ borderRight: { sm: '1px solid rgba(0,0,0,0.1)', xs: 'none' } }} px={3}>
+                    <Box py={{ xs: 1, sm: 2 }}>
+                        <Typography sx={{ fontSize: { xs: '4vw', sm: '1.2vw' }, color: '#154d4f', fontWeight: 'bold' }}>Pages</Typography>
+                        <Box py={{ xs: 1, sm: 2 }}>
+                            <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>Home</Typography>
+                            <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>Gallery</Typography>
+                            <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>Generate</Typography>
+                            <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>Our Team</Typography>
+                        </Box>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={3} px={3}>
+                    <Box py={{ xs: 1, sm: 2 }}>
+                        <Typography sx={{ fontSize: { xs: '4vw', sm: '1.2vw' }, color: '#154d4f', fontWeight: 'bold' }}>Contact Us</Typography>
+                        <Box py={{ xs: 1, sm: 2 }}>
+                            <Box sx={{ display: 'flex' }}>
+                                <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white', fontWeight: 'bold' }}>Email:&nbsp;</Typography>
+                                <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>gennotate@gmail.com</Typography>
+                            </Box>
+                            <Box sx={{ display: 'flex' }}>
+                                <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white', fontWeight: 'bold' }}>Phone:&nbsp;</Typography>
+                                <Typography sx={{ fontSize: { xs: '3vw', sm: '1.2vw' }, color: 'white' }}>+92 321 2165297</Typography>
+                            </Box>
                         </Box>
                     </Box>
                 </Grid>
             </Grid>
         </Box>
         <Box mt={2}>
-            <Typography textAlign='center' sx={{ color: 'white', fontSize: '1.2vw' }}>© All rights reserved · Gennotate · Privacy Policy</Typography>
+            <Typography textAlign='center' sx={{ color: 'white', fontSize: { sm: '1.2vw', xs: '3vw' } }}>© All rights reserved · Gennotate · Privacy Policy</Typography>
         </Box>
     </Box>
   )

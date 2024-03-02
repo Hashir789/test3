@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Box, Grid, Tooltip, Typography, IconButton } from '@mui/material'
 
 const Footer = () => {
@@ -9,18 +9,14 @@ const Footer = () => {
             <Grid container>
                 <Grid item xs={12} sm={5} sx={{ borderRight: { sm: '1px solid rgba(0,0,0,0.1)', xs: 'none' } }} px={3}>
                     <Box>
-                        <Typography sx={{ fontFamily: "'Lateef', serif", fontSize: { sm: '2.76vw', xs: '12vw' }, color: 'white', fontWeight: 'bold' }}>Gennotate</Typography>
+                        <Typography sx={{ fontFamily: "'Lateef', serif", fontSize: { sm: '3vw', xs: '12vw' }, color: '#154d4f', fontWeight: 'bold' }}>Gennotate</Typography>
                         <Typography sx={{ fontSize: { sm: '1.2vw', xs: '4vw' }, color: 'white', lineHeight: 1.2 }} textAlign='justify'>Gennotate, meticulously developed by NUST students, serves as a comprehensive web application dedicated to the precise generation and segmentation of Optical Coherence Tomography (OCT) images, reflecting a seamless blend of simplicity and functionality.</Typography>
-                        <Box sx={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }} mt={{ xs: 1, sm: 1 }} mb={{ xs: 1, sm: 0 }}>
-                            <Tooltip title="Github">
-                                <IconButton><FaGithub style={{ color: 'white', fontSize: { xs: '1.2vw', sm: '4vw' } }} /></IconButton>
-                            </Tooltip>
-                            <Tooltip title="LinkedIn">
-                                <IconButton><FaLinkedin style={{ color: 'white', fontSize: { xs: '1.2vw', sm: '4vw' } }}/></IconButton>
-                            </Tooltip>
-                            <Tooltip title="Twitter">
-                                <IconButton><FaTwitter style={{ color: 'white', fontSize: { xs: '1.2vw', sm: '4vw' } }}/></IconButton>
-                            </Tooltip>
+                        <Box sx={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }} mt={{ xs: 2, sm: 2 }} mb={{ xs: 1, sm: 0 }}>
+                            <Tooltip title='Github'><Box sx={{ color: 'white', '&:hover': { color: '#154d4f', cursor: 'pointer' }}}><FaGithub size={24}/></Box></Tooltip>
+                            <Box mx={1}></Box>
+                            <Tooltip title='LinkedIn'><Box sx={{ color: 'white', '&:hover': { color: '#154d4f', cursor: 'pointer' }}}><FaLinkedin size={24}/></Box></Tooltip>
+                            <Box mx={1}></Box>
+                            <Tooltip title='Twitter'><Box sx={{ color: 'white', '&:hover': { color: '#154d4f', cursor: 'pointer' }}}><FaTwitter size={24}/></Box></Tooltip>
                         </Box>
                     </Box>
                 </Grid>

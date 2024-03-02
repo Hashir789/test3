@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom'
 const Gallery = () => {
   return (
     <Box>
-        <Footer/>
-        <Link to='/gallery'><Button>Gallery</Button></Link>
+      <Box sx={{ height: '90vh' }}></Box>
+      <Footer/>
+      <Link to='/gallery'><Button>Gallery</Button></Link>
     </Box>
   )
 }
